@@ -1,0 +1,134 @@
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+button.add-note-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #114232;
+  color: white;
+  border: 2px solid #114232;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button.add-note-button:hover {
+  background-color: #618264;
+  border-color: #114232;
+}
+
+button.add-note-button:focus {
+  outline: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: #618264;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-note-button-container {
+  display: grid;
+  place-items: center;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.swal2-popup-custom {
+  font-size: 16px;
+}
+
+.swal2-title-custom {
+  color: #4caf50;
+}
+
+.swal2-show-custom {
+  animation: slideInRight 0.5s forwards;
+}
+
+.swal2-hide-custom {
+  animation: slideOutRight 0.5s forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(to bottom right, #4f6f52, #d4e7c5, #86a789, #739072);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Lobster", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 9px;
+  color: rgb(180, 212, 255);
+}
+
+.note-container:nth-child(n + 2) {
+  border-top: 8px solid #eeeff3;
+}
+
+.centered-text {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Georgia", serif;
+  color: #333;
+  margin-top: 50px;
+  font-weight: bold;
+  line-height: 1.5;
+}

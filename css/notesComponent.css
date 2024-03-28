@@ -1,0 +1,181 @@
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.note-card {
+  position: relative;
+  background: linear-gradient(to bottom, #4f6f52, #739072, #4f6f52);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.note-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #2a4233;
+  background: linear-gradient(to bottom, #a5dd9b, #c5ebaa);
+  border: 2px solid #12372a;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.note-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  border-bottom: 5px solid transparent;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #12372a 50%, #12372a 50%);
+  background-size: 200% 200%;
+  background-position: 0 100%;
+  border-radius: 5px;
+  transition: background-position 0.2s;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.note-content p {
+  margin-bottom: 15px;
+}
+
+.note-content p:last-child {
+  margin-bottom: 0;
+}
+
+.edit-button,
+.delete-button {
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  background-color: #0c359e;
+}
+
+.delete-button {
+  background-color: #a0153e;
+}
+
+.delete-button:hover {
+  background-color: #f44336;
+}
+
+.action-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.action-buttons button {
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+.action-buttons .edit-button:hover {
+  background-color: #01558e;
+}
+
+.action-buttons .delete-button:hover {
+  background-color: #bd4141;
+}
+
+.edit-form {
+  display: none;
+  background-color: #12372a;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form input[type="text"],
+.edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.edit-form button {
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.edit-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.save-button {
+  background-color: #00bcd4;
+}
+
+.cancel-button {
+  background-color: #757575;
+}
+
+.cancel-button:hover {
+  background-color: #424242;
+}
+
+@media screen and (max-width: 1024px) {
+  .note-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(50% - 20px), 1fr));
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .note-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
